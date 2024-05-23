@@ -19,5 +19,12 @@ export const nav = () => {
     },
   });
 
-  timeline.to(component, { paddingTop: 0, backgroundColor: 'var(--color-theme--background)' });
+  const navBackground = getComputedStyle(component)
+    .getPropertyValue('--color-theme--background')
+    .trim();
+
+  timeline.to(component, {
+    paddingTop: 0,
+    '--color-theme--nav-background': navBackground,
+  });
 };

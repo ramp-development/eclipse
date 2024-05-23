@@ -14,7 +14,7 @@ export const thirds = () => {
     const slider = new Splide(component, {
       arrows: false,
       pagination: false,
-      gap: 'var(--style-page--gap)',
+      gap: 'calc( var(--style-page--gap) * 2)',
       perPage: 3,
       breakpoints: {
         767: { perPage: 2 },
